@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_task_tree" model="ir.ui.view">
+            <field name="name">task.tree</field>
+            <field name="model">task_manager.task</field>
+            <field name="arch" type="xml">
+                <tree string="tasks tree">
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="dead_line"/>
+                        <field name="completed"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_task_form" model="ir.ui.view">
+            <field name="name">task.form</field>
+            <field name="model">task_manager.task</field>
+            <field name="arch" type="xml">
+                <form string="tasks form">
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="dead_line"/>
+                        <field name="completed"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="action_task" model="ir.actions.act_window">
+            <field name="name">Task</field>
+            <field name="res_model">task_manager.task</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="main_taskmanager_menu" name="Task manager"/>
+        <menuitem id="taskmanager_list" name="list" parent="main_taskmanager_menu"/>
+        <menuitem id="menu_task" name="task manager" parent="taskmanager_list" action="action_task"/>
+    </data>
+</odoo>
+<!--                  parent="base.menu_administration"-->
