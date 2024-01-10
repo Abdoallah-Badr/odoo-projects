@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "School Module",
-    'summary': """ Manage your school """,
+    'summary': """ Manage your school moshen updates""",
     'description': """
         School module for managing trainings:
             - training courses
