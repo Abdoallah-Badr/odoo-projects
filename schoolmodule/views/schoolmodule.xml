@@ -91,7 +91,9 @@
                         <field name="name"/>
                         <field name="age" default=""/>
                         <field name="courses" widget='radio'/>
-                        <field name="classroom_ids"/>
+                                          <group>
+                            <field name="classroom_ids" widget="many2many_tags" />
+                        </group>
                     </group>
                 </sheet>
             </form>
