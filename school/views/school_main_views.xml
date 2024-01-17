@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+        <!--    student action-->
+
+    <record model="ir.actions.act_window" id="student_list_action">
+        <field name="name">students</field>
+        <field name="res_model">school.student</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Enter first student at your school</p>
+        </field>
+    </record>
+
+        <!--    teacher action-->
+
+    <record model="ir.actions.act_window" id="teacher_list_action">
+        <field name="name">teachers</field>
+        <field name="res_model">school.teacher</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Enter the first teacher at your school</p>
+        </field>
+    </record>
+    <!--    classroom action-->
+    <record model="ir.actions.act_window" id="classroom_list_action">
+        <field name="name">classroom</field>
+        <field name="res_model">school.classroom</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Define your classes</p>
+        </field>
+    </record>
+    <menuitem id="main_school_menu" name="School"/>
+    <menuitem id="school_menu" name="School menu" parent="main_school_menu"/>
+    <menuitem id="school_detailed_menu" name="School sub menu " parent="school_menu"/>
+    <menuitem id="classroom_menu" name="Classroom" parent="school_detailed_menu" action="classroom_list_action"/>
+    <menuitem id="teacher_menu" name="Teacher" parent="school_detailed_menu" action="teacher_list_action"/>
+    <menuitem id="student_menu" name="Student" parent="school_detailed_menu" action="student_list_action"/>
+</odoo>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--  teacher model   -->
+    <!--  teacher model tree view  -->
+    <record model="ir.ui.view" id="teacher_tree_view">
+        <field name="name">teacher.tree</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <tree string="teachers list">
+                <field name="name"/>
+                <field name="age"/>
+                <field name="courses"/>
+                <field name="classroom_ids"/>
+            </tree>
+        </field>
+    </record>
+    <!--  teacher model form view  -->
+    <record model="ir.ui.view" id="teacher_form_view">
+        <field name="name">teacher.form</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <form string="teacher form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="age" default=""/>
+                        <field name="courses" widget='radio'/>
+                        <field name="join_date"/>
+                        <field name="teaching_period" help="period with years"/>
+                        <field name="classroom_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
