@@ -7,7 +7,7 @@
         <field name="name">student.tree</field>
         <field name="model">school.student</field>
         <field name="arch" type="xml">
-            <tree string="students list">
+            <tree string="students list" class="styled_tree">
                 <field name="name"/>
                 <field name="age"/>
                 <field name="gender"/>
@@ -19,11 +19,11 @@
     </record>
 
     <!--  student model form view  -->
-    <record model="ir.ui.view" id="student_form_view">
+    <record model="ir.ui.view" id="student_form_view" >
         <field name="name">student.form</field>
         <field name="model">school.student</field>
         <field name="arch" type="xml">
-            <form string="students form">
+            <form string="students form" class="styled_form">
                 <sheet>
                     <group>
                         <group>

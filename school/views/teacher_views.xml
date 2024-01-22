@@ -2,11 +2,11 @@
 <odoo>
     <!--  teacher model   -->
     <!--  teacher model tree view  -->
-    <record model="ir.ui.view" id="teacher_tree_view">
+    <record model="ir.ui.view" id="teacher_tree_view" >
         <field name="name">teacher.tree</field>
         <field name="model">school.teacher</field>
         <field name="arch" type="xml">
-            <tree string="teachers list">
+            <tree string="teachers list" class="styled_tree">
                 <field name="name"/>
                 <field name="age"/>
                 <field name="courses"/>
@@ -15,11 +15,11 @@
         </field>
     </record>
     <!--  teacher model form view  -->
-    <record model="ir.ui.view" id="teacher_form_view">
+    <record model="ir.ui.view" id="teacher_form_view" >
         <field name="name">teacher.form</field>
         <field name="model">school.teacher</field>
         <field name="arch" type="xml">
-            <form string="teacher form">
+            <form string="teacher form" class="styled_form">
                 <sheet>
                     <group>
                         <field name="name"/>

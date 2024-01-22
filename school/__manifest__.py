@@ -19,8 +19,9 @@
          'views/school_main_views.xml',
          'views/student_views.xml',
          'views/classroom_views.xml',
-         'views/teacher_views.xml'
+         'views/teacher_views.xml',
     ],
+    'assets': {'web.assets_backend':['static/src/css/styles.css']},
     'installable':True,
 }
 
