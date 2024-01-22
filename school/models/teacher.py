@@ -12,7 +12,7 @@ class Teacher(models.Model):
         ('arabic', 'Arabic'), ('math', 'Math'), ('english', 'English'), ('science', 'Science'), ('history', 'History')
     ], string="Teaching Course")
     join_date = fields.Date(string='Join date', required=True)
-    teaching_period = fields.Integer(string="Teaching period", readonly=True, compute="_compute_teaching_period")
+    teaching_period = fields.Float(string="Teaching period", readonly=True, compute="_compute_teaching_period", digits=(3, 1))
     classroom_ids = fields.Many2many('school.classroom', string='Classrooms')
 
     @api.depends('join_date')
@@ -21,7 +21,10 @@ class Teacher(models.Model):
             if rec.join_date:
                 join_date = fields.Date.from_string(rec.join_date)
                 today_date = datetime.now().date()
-                difference = float(int((today_date - join_date).days)/365)
-                rec.teaching_period = difference
+                difference = (today_date - join_date).days
+                if difference < 365:
+                    rec.teaching_period = difference
+                else:
+                    rec.teaching_period = difference/365
             else:
                 rec.teaching_period = 0

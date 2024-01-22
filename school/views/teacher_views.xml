@@ -26,7 +26,7 @@
                         <field name="age" default=""/>
                         <field name="courses" widget='radio'/>
                         <field name="join_date"/>
-                        <field name="teaching_period" help="period with years"/>
+                        <field name="teaching_period" help="after 365 days period with years"/>
                         <field name="classroom_ids" widget="many2many_tags"/>
                     </group>
                 </sheet>

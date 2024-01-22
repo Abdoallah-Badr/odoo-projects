@@ -21,7 +21,7 @@
          'views/classroom_views.xml',
          'views/teacher_views.xml',
     ],
-    'assets': {'web.assets_backend':['static/src/css/styles.css']},
+    # 'assets': {'web.assets_backend':['static/src/css/styles.css']},
     'installable':True,
 }
 
