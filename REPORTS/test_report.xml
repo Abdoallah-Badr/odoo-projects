@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="test_report_record" model="ir.actions.report">
+        <field name="name">Generic Report</field>
+        <field name="model">estate.property</field>
+        <field name="report_type">qweb-html</field>
+        <field name="binding_model_id" ref="model_estate_property"/>
+        <field name="binding_type">report</field>
+        <field name="report_name">real_estate_trial.test_report_template</field>
+        <field name="report_file">real_estate_trial.test_report_template</field>
+    </record>
+    <template id="test_report_template" name="test template">
+
+        <t t-call="web.html_container" t-encoding="utf-8">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.internal_layout">
+                    <div style="direction:rtl;">
+                        <h1 style="text-decoration:underline; text-align:center; margin-bottom:1.5rem; font-size:20px;">
+                            بيان
+                            تسليم عهدة
+                        </h1>
+                        <table style="width:100%;border: 1px solid #404040; ">
+                            <tr style="border: 1px solid #404040; text-align:right; padding-right:0.5rem; ">
+                                <th style="font-weight: normal;height: 30px; padding: 0 5px 0 0 " colspan="2">اليوم:-</th>
+                                <th style="font-weight: normal;" colspan="2">الموافق:-</th>
+                            </tr>
+                            <tr style="border: 1px solid #424242; padding-right:0.5rem;">
+                                <td colspan="2" style="height: 30px; padding: 0 5px 0 0 ">إسم صاحب العهدة:-</td>
+                                <td colspan="2">الكود:-</td>
+                            </tr>
+                            <tbody>
+                                <tr style=" text-align: center;border: 1px solid #404040; background-color:#d1d1d1 ">
+                                    <td style="width:17px; border: 1px solid  ">
+                                        <p style="margin-bottom: 0;">م</p>
+                                    </td>
+                                    <td style="margin-bottom:0; width:45%; border: 1px solid ">
+                                        <p style="margin-bottom: 0;">وصف العهدة</p>
+                                    </td>
+                                    <td style="margin-bottom:0;  width:10%; border: 1px solid #404040">
+                                        <p style=" margin-bottom: 0;">الحالة</p>
+                                    </td>
+                                    <td style="margin-bottom:0; border: 1px solid #404040">
+                                        <p style="margin-bottom: 0;">ملاحظات</p>
+                                    </td>
+                                </tr>
+                                <tr style="border: 1px solid #404040">
+                                    <td style=" height: 30px; text-align:center; border: 1px solid #404040 margin:auto">
+                                        1
+                                    </td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                </tr>
+                                <tr style="border: 1px solid #404040">
+                                    <td style=" height: 30px; text-align:center; border: 1px solid #404040">2</td>
+                                    <td style=" border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                </tr>
+                                <tr style="border: 1px solid #404040">
+                                    <td style=" height: 30px; text-align:center; border: 1px solid #404040">3</td>
+                                    <td style=" border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                </tr>
+                                <tr style="border: 1px solid #404040">
+                                    <td style=" height: 35px; text-align:center; border: 1px solid #404040">4</td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                </tr>
+                                <tr style="border: 1px solid #404040">
+                                    <td style=" height: 35px; text-align:center; border: 1px solid #404040">5</td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                </tr>
+                                <tr style="border: 1px solid #404040">
+                                    <td style=" height: 35px; text-align:center; border: 1px solid #404040">6</td>
+                                    <td style=" border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                </tr>
+                                <tr style="border: 1px solid #404040">
+                                    <td style=" height: 35px; text-align:center; border: 1px solid #404040">7</td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                </tr>
+                                <tr style="border: 1px solid #404040">
+                                    <td style=" height: 35px; text-align:center; border: 1px solid #404040">8</td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                </tr>
+                                <tr style="border: 1px solid #404040">
+                                    <td style=" height: 35px; text-align:center; border: 1px solid #404040">9</td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                </tr>
+                                <tr style="border: 1px solid #404040">
+                                    <td style=" height: 35px; text-align:center; border: 1px solid #404040">10</td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                    <td style="border: 1px solid #404040"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="margin-top:10px;">
+                            <p style="margin:0">أقر أنا مستلم العهدة الموقع أدناه بأنني أستلمت العهدة الموضحة أعلاه حسب
+                                حالتها الموضحة
+                            </p>
+                            <p style="margin:0">وأنها من تاريخة قد أصبحت في عهدتي و على مسئوليتي الخاصة</p>
+                        </div>
+                        <div>
+                            <div style=" margin: 3rem 5rem 0px 5rem;">
+                                    <p  style="display:inline;">المٌسلِم</p>
+                                    <p style="display:inline;  margin:0 35rem 0 0;">المستلم</p>
+                            </div>
+                            <span style="margin:2rem 0 0 0">
+                                <p style="text-align:center">مدير المشروع</p>
+                            </span>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
